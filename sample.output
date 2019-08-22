@@ -1,0 +1,26 @@
+b'\x00\n'
+b'/Ene5\\XS210 ESMR 5.0\r\n'        # Header
+b'\r\n'
+b'1-3:0.2.8(50)\r\n'                # version info
+b'0-0:1.0.0(190527232514S)\r\n'     # capture time 
+b'0-0:96.1.1(xxx)\r\n'              # equipment ID
+b'1-0:1.8.1(002120.550*kWh)\r\n'    # tariff 1
+b'1-0:1.8.2(001194.657*kWh)\r\n'    # tariff 2
+b'1-0:2.8.1(000000.008*kWh)\r\n'    # delivered 1
+b'1-0:2.8.2(000000.000*kWh)\r\n'    # delivered 2
+b'0-0:96.14.0(0001)\r\n'            # tarif indicator
+b'1-0:1.7.0(00.478*kW)\r\n'         # Actual power taken
+b'1-0:2.7.0(00.000*kW)\r\n'         # power delivered
+b'0-0:96.7.21(00139)\r\n'           # power fails
+b'0-0:96.7.9(00003)\r\n'            # long power fails
+b'1-0:99.97.0(2)(0-0:96.7.19)(180617150557S)(0000004381*s)(180525183548S)(0000000221*s)\r\n' # power fail event log
+b'1-0:32.32.0(00004)\r\n'           # voltage sags L1
+b'1-0:32.36.0(00000)\r\n'           # voltage swells L2
+b'0-0:96.13.0()\r\n'                # gas ID
+b'1-0:32.7.0(235.0*V)\r\n'          # voltage L1
+b'1-0:31.7.0(002*A)\r\n'            # current L1
+b'1-0:21.7.0(00.478*kW)\r\n'        # active power +L1
+b'1-0:22.7.0(00.000*kW)\r\n'        # active power -L1
+b'0-1:24.1.0(003)\r\n'              # device type
+b'0-1:96.1.0(4730303538353330303134383334303138)\r\n' # gas ID
+b'0-1:24.2.1(190527232500S)(00869.539*m3)\r\n'  # gas, (capture time), (gas delivered m3)
