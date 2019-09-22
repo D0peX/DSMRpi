@@ -93,7 +93,7 @@ firstloop = True
 try:
     scon.open()
     _ = scon.readline() # first line of output is "b'\x00\n'". and not needed.
-    print("[DSMRpi INFO] Successfully opened serial connection on {c}.\nWriting data to: {i}:{p} DB:{d}").format(c=confSerial['port'], i=database['host'], p=database['port'], d=database['dn'])
+    print("[DSMRpi INFO] Successfully opened serial connection on {c}.\nWriting data to: {i}:{p} DB:{d}".format(c=confSerial['port'], i=database['host'], p=database['port'], d=database['db']))
     while True:
         line = str(scon.readline())
         if "!" not in line:
