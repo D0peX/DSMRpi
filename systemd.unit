@@ -1,12 +1,14 @@
-sudo nano /lib/systemd/system/DSMRpi.service
-
 [Unit]
 Description=DSMRpi energy reader
-After=multi-user.target
+After=multi-user.target network.target
 
 [Service]
 Type=idle
+WorkingDirectory=/home/pi/DSMRpi
 ExecStart=/usr/bin/python3 /home/pi/DSMRpi/app.py
+User=pi
+Restart=on-failure
+RestartSec=10s
 
 [Install]
 WantedBy=multi-user.target
