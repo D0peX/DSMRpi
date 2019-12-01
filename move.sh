@@ -1,7 +1,7 @@
 #!/bin/sh
 # Small script that copies current working dir to remote host
 
-HOST="10.10.30.54"
+HOST="meterkast"
 USER="pi"
 DEST="/home/pi/dsmr"
 DIR=$(pwd)
