@@ -21,8 +21,6 @@ scon.timeout = 2
 data = []
 reMatch = re.compile("(\d{3,}\.\d*|\d{3,}|\d{2}\.\d{3,})")  # This RE is used to match data between `()`
 
-
-
 def timeConv(data):
     """Expects `data` as string. Returns string with UNIX time UTC"""
     # Messing with timeConv might result in influx not liking your date/time. beware.
@@ -41,7 +39,6 @@ def timeConv(data):
 
         return(date)
 
-
 def floatConv(data):
     """Expects `data` as string. Returns a `float`"""
 
@@ -50,7 +47,6 @@ def floatConv(data):
         k = matches[0]
         k = k.lstrip("0") # Need to strip all leading zero's. Otherwise it cannot be converted to float.
         return(float(k))
-
 
 def intConv(data):
     matches = re.findall(reMatch, data)
@@ -97,7 +93,7 @@ try:
     while True:
         line = str(scon.readline())
         if "!" not in line:
-                # read data untill '!' is returned in scon.readline
+                # read data until '!' is returned in scon.readline
                 # Once `!` is seen in `line`, it will defer to the else statement
                 data.append(line)
 
@@ -146,12 +142,7 @@ currentL1,tariffindicator={tinc} value={cl1} {ts}""".format(tinc=tinc, ts=timest
             # do nothing, and set firstloop to False
             firstloop = False
             print("[DSMRpi INFO] Starting to send data now. No further output expected.")
-            data.clear()
-            
-
-            
-            
-
+            data.clear()        
 
 except serial.SerialException as e:
     print("[DSMRpi ERROR] {}\n").format(e)
