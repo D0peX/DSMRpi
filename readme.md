@@ -2,6 +2,8 @@
 
 Small script for reading serial data from a DSMR energy meter. With influxDB backend.
 
+![Grafana](img/DSMRpiGrafanav1.png)
+
 ## Preface
 Since I had a spare Raspberry Pi (Model B+) and a DSMR energy meter. I figured i could as well read all the data it is sending to its P1 port. However. There was a catch. Other projects aimed at reading energy data from their meters involved either a newer model Pi, or were not capable of high precision, or both.
 
